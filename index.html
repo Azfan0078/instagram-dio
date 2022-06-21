@@ -11,7 +11,11 @@
 <body>
     <div class="instagram-wrapper">
         <div class="instagram-phone">
-            <img src="./img/instagram-celular.png" alt="celular">
+
+            <img src="./img/borda-celular.png" alt="celular">
+            <div class="celular-foto" id="celular-foto">
+                <img src="./img/pagina-instagram.jpeg" alt="">
+            </div>
         </div>
         <div class="instagram-continue">
             <div class="group">
@@ -19,7 +23,7 @@
                 <div class="profile-photo">
                     <img src="./img/perfil-instagram.jpg" alt="foto de perfil">
                 </div>
-                <a href="#" class="instagram-login">Continue como Gabriel Di Domenico</a>
+                <a href="https://www.instagram.com/gabrieldidomenico/" class="instagram-login">Continue como Gabriel Di Domenico</a>
                 <a href="#" class="instagram-logout">Remover conta</a>
             </div>
             <div class="group">
@@ -32,12 +36,26 @@
             <div class="get-the-app">
                 <p class="get-app">Baixe o aplicativo</p>
                 <div class="download">
-                    <a href="#" class="app-download"></a>
-                    <a href="#" class="app-download"></a>
+                    <a href="https://apps.apple.com/us/app/instagram/id389801252" class="app-download"></a>
+                    <a href="https://play.google.com/store/apps/details?id=com.instagram.android&hl=en&gl=US" class="app-download"></a>
                 </div>
             </div>
         </div>
     </div>
 </body>
+<script>
+    const celularFoto = document.getElementById('celular-foto')
+
+    let fotoAtual = 1
+    setInterval(() => {
+        if (fotoAtual === 1) {
+            celularFoto.innerHTML = `<img src="./img/tela.png" alt="foto-celular">`
+            fotoAtual = 2
+        } else {
+            celularFoto.innerHTML = `<img src="./img/pagina-instagram.jpeg" alt="foto-celular">`
+            fotoAtual = 1
+        }
+    }, 5000)
+</script>
 
 </html>
